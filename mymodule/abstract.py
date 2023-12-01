@@ -12,13 +12,15 @@ class Dog(ABC):
 
 
 class Poodle(Dog):
+   def __init__(self):
+      self.__breed = "poodle"
 
    def speak(self):
-      print(self.breed + " woof")
+      print(self.__breed + " woof")
 
    @property
    def breed(self) -> str:
-      return "poodle"
+      return self.__breed
 
 dog = Poodle()     #  <-- can't instantiate if Dog isn't implemented completely
 dog.speak()        
