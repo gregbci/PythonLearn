@@ -22,9 +22,21 @@ class Poodle(Dog):
    def breed(self) -> str:
       return self.__breed
 
-dog = Poodle()     #  <-- can't instantiate if Dog isn't implemented completely
-dog.speak()        
-print(dog.breed)   #  <-- this behaves just like a variable
+class Labrador(Dog):
+   def speak(self):
+      print(self.breed + " woof")
 
-# dog.breed = "cabbage"  #  <-- this fails because property is readonly
+   breed: str = "Labrador"
+
+
+
+poodle = Poodle()     #  <-- can't instantiate if Dog isn't implemented completely
+poodle.speak()        
+print(poodle.breed)   #  <-- this behaves just like a variable
+# poodle.breed = "cabbage"  #  <-- this fails because property is readonly
+
+lab = Labrador()
+lab.speak()
+print(lab.breed)
+
 
