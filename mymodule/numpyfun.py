@@ -10,11 +10,11 @@ e = np.array(["e", "f", "g", "h"])
 array_to_test = d
 
 if not isinstance(array_to_test, np.ndarray):
-   print("invalid data")
+    print("invalid data")
 else:
-   print("valid data")
+    print("valid data")
 
-f = np.empty([0,2])
+f = np.empty([0, 2])
 f = np.concatenate((f, d))
 
 print(f)
